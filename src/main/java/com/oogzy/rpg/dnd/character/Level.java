@@ -1,12 +1,9 @@
 package com.oogzy.rpg.dnd.character;
 
-import lombok.Data;
+import lombok.Getter;
 
-@Data
 public class Level
 {
-	private int totalXP;
-
 	private static final Integer[] LEVELS = new Integer[30];
 	static
 	{
@@ -41,6 +38,9 @@ public class Level
 		LEVELS[28] = 825000;
 		LEVELS[29] = 1000000;
 	}
+
+	@Getter
+	private int totalXP;
 
 	public void addXP(int xp)
 	{
