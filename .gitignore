@@ -1,0 +1,17 @@
+# Binaries #
+*.class
+target
+bin
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IDE Files #
+.classpath
+.project
+.settings
+
+# OSX System files #
+.DS_Store
