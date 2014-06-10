@@ -44,7 +44,7 @@ public class Character
 
 	private int level()
 	{
-		return getLevel().value();
+		return getLevel().current();
 	}
 
 	public void addExperience(int xp)
