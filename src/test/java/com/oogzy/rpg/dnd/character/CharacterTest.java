@@ -14,12 +14,29 @@ public class CharacterTest extends TestCase
 		Character character = new Character(RaceName.HUMAN);
 		character.setName("CharTest");
 
-		character.setAbility(Ability.STR, 10);
-		character.setAbility(Ability.CON, 10);
-		character.setAbility(Ability.DEX, 10);
-		character.setAbility(Ability.INT, 10);
-		character.setAbility(Ability.WIS, 10);
-		character.setAbility(Ability.CHA, 10);
+		int STR = 6;
+		character.setAbility(Ability.STR, STR);
+		assertEquals(STR, character.getAbility(Ability.STR));
+
+		int CON = 8;
+		character.setAbility(Ability.CON, CON);
+		assertEquals(CON, character.getAbility(Ability.CON));
+
+		int DEX = 12;
+		character.setAbility(Ability.DEX, DEX);
+		assertEquals(DEX, character.getAbility(Ability.DEX));
+
+		int INT = 14;
+		character.setAbility(Ability.INT, INT);
+		assertEquals(INT, character.getAbility(Ability.INT));
+
+		int WIS = 16;
+		character.setAbility(Ability.WIS, WIS);
+		assertEquals(WIS, character.getAbility(Ability.WIS));
+
+		int CHA = 18;
+		character.setAbility(Ability.CHA, CHA);
+		assertEquals(CHA, character.getAbility(Ability.CHA));
 	}
 
 	public void testGetOneHalfOfTheLevel()
