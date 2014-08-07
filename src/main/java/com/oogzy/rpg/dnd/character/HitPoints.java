@@ -1,5 +1,7 @@
 package com.oogzy.rpg.dnd.character;
 
+import java.text.MessageFormat;
+
 import lombok.Data;
 
 @Data
@@ -26,6 +28,6 @@ public class HitPoints
 	@Override
 	public String toString()
 	{
-		return new StringBuilder(getHitPoints()).append("/").append(getMaxHitPoints()).toString();
+		return MessageFormat.format("{0}/{1}", getHitPoints(), getMaxHitPoints());
 	}
 }
