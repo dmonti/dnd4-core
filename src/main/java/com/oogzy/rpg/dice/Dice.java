@@ -17,14 +17,14 @@ public class Dice
 		this.sides = sides;
 	}
 
-	public DiceResult roll(int timesToRoll)
+	public DiceResults roll(int timesToRoll)
 	{
 		int results[] = new int[timesToRoll];
 		for (int t = 0; t < timesToRoll; t++)
 		{
 			results[t] = roll();
 		}
-		return new DiceResult(this, results);
+		return new DiceResults(this, results);
 	}
 
 	public int roll()
