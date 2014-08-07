@@ -2,6 +2,9 @@ package com.oogzy.rpg;
 
 import org.junit.Test;
 
+import com.oogzy.rpg.dice.Dice;
+import com.oogzy.rpg.dice.DicePack;
+
 import junit.framework.TestCase;
 
 public class DicesTest extends TestCase
@@ -30,7 +33,7 @@ public class DicesTest extends TestCase
 	{
 		for (int i = 0; i < ROLL_TIMES; i++)
 		{
-			int score = DicePack.getD20().roll(3);
+			int score = DicePack.getD20().roll(3).sum();
 			assertTrue(score >= 3 && score <= 60);
 		}
 	}

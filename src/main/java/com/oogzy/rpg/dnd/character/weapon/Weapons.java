@@ -1,6 +1,6 @@
 package com.oogzy.rpg.dnd.character.weapon;
 
-import com.oogzy.rpg.DicePack;
+import com.oogzy.rpg.dice.DicePack;
 
 public class Weapons
 {

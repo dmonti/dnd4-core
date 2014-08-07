@@ -3,7 +3,7 @@ package com.oogzy.rpg.dnd.character;
 import lombok.Getter;
 import lombok.Setter;
 
-import com.oogzy.rpg.DicePack;
+import com.oogzy.rpg.dice.DicePack;
 import com.oogzy.rpg.dnd.character.race.Race;
 import com.oogzy.rpg.dnd.character.weapon.Weapon;
 import com.oogzy.rpg.dnd.character.weapon.Weapons;

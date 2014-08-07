@@ -1,4 +1,4 @@
-package com.oogzy.rpg;
+package com.oogzy.rpg.dice;
 
 import java.text.MessageFormat;
 import java.util.Random;
@@ -17,14 +17,14 @@ public class Dice
 		this.sides = sides;
 	}
 
-	public int roll(int timesToRoll)
+	public DiceResult roll(int timesToRoll)
 	{
-		int score = 0;
+		int results[] = new int[timesToRoll];
 		for (int t = 0; t < timesToRoll; t++)
 		{
-			score += roll();
+			results[t] = roll();
 		}
-		return score;
+		return new DiceResult(this, results);
 	}
 
 	public int roll()

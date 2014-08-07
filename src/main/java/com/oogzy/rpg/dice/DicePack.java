@@ -1,4 +1,4 @@
-package com.oogzy.rpg;
+package com.oogzy.rpg.dice;
 
 public class DicePack
 {

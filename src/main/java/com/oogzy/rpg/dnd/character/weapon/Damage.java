@@ -2,7 +2,7 @@ package com.oogzy.rpg.dnd.character.weapon;
 
 import lombok.Getter;
 
-import com.oogzy.rpg.Dice;
+import com.oogzy.rpg.dice.Dice;
 
 @Getter
 public class Damage
@@ -37,6 +37,6 @@ public class Damage
 
 	public int rollDamage()
 	{
-		return getDice().roll(getRolls()) + getModifier();
+		return getDice().roll(getRolls()).sum() + getModifier();
 	}
 }
