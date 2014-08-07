@@ -37,6 +37,7 @@ public class HitPoints
 	{
 		int newMaxHitPoints = getMaxHitPoints() + value;
 		setMaxHitPoints(newMaxHitPoints);
+		heal(value);
 	}
 
 	public void heal(int value)
