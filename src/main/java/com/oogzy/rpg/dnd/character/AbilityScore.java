@@ -1,7 +1,9 @@
 package com.oogzy.rpg.dnd.character;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+@AllArgsConstructor
 public class AbilityScore
 {
 	@Getter
@@ -9,10 +11,4 @@ public class AbilityScore
 
 	@Getter
 	private int bonus;
-
-	public AbilityScore(Ability ability, int bonus)
-	{
-		this.ability = ability;
-		this.bonus = bonus;
-	}
 }
