@@ -4,10 +4,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>jar</packaging>
-	<name>Oogzy::DnD</name>
+	<name>Oogzy::DnD4</name>
 
 	<groupId>com.oogzy.rpg</groupId>
-	<artifactId>rpg-dnd-4ed</artifactId>
+	<artifactId>dnd4-core</artifactId>
 	<version>0.1</version>
 
 	<repositories>
@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.14.0</version>
+			<version>1.14.4</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
