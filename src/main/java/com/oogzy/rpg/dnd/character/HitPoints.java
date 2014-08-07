@@ -2,18 +2,46 @@ package com.oogzy.rpg.dnd.character;
 
 import java.text.MessageFormat;
 
-import lombok.Data;
+import lombok.Getter;
 
-@Data
 public class HitPoints
 {
+	@Getter
 	private int maxHitPoints;
 
+	@Getter
 	private int hitPoints;
 
-	public void heal(int hitPoints)
+	public HitPoints()
 	{
-		setHitPoints(getHitPoints() + hitPoints);
+	}
+
+	public HitPoints(int maxHitPoints)
+	{
+		this();
+		setMaxHitPoints(maxHitPoints);
+		setHitPoints(maxHitPoints);
+	}
+
+	private void setMaxHitPoints(int maxHitPoints)
+	{
+		this.maxHitPoints = maxHitPoints;
+	}
+
+	private void setHitPoints(int hitPoints)
+	{
+		this.hitPoints = hitPoints;
+	}
+
+	public void addMaxHitPoints(int value)
+	{
+		int newMaxHitPoints = getMaxHitPoints() + value;
+		setMaxHitPoints(newMaxHitPoints);
+	}
+
+	public void heal(int value)
+	{
+		setHitPoints(getHitPoints() + value);
 		if (getHitPoints() > getMaxHitPoints())
 		{
 			setHitPoints(getMaxHitPoints());
