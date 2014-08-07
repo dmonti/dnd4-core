@@ -1,5 +1,6 @@
 package com.oogzy.rpg;
 
+import java.text.MessageFormat;
 import java.util.Random;
 
 import lombok.Getter;
@@ -29,5 +30,11 @@ public class Dice
 	public int roll()
 	{
 		return RANDOM.nextInt(sides) + 1;
+	}
+
+	@Override
+	public String toString()
+	{
+		return MessageFormat.format("D{0}", getSides());
 	}
 }

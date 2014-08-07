@@ -9,6 +9,13 @@ public class DicesTest extends TestCase
 	private static final int ROLL_TIMES = 1000;
 
 	@Test
+	public void testToString()
+	{
+		Dice dice = new Dice(20);
+		assertEquals("D20", dice.toString());
+	}
+
+	@Test
 	public void testRoll()
 	{
 		for (int i = 0; i < ROLL_TIMES; i++)
