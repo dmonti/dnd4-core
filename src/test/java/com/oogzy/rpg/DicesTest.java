@@ -6,17 +6,25 @@ import junit.framework.TestCase;
 
 public class DicesTest extends TestCase
 {
+	private static final int ROLL_TIMES = 1000;
+
 	@Test
 	public void testRoll()
 	{
-		int score = Dices.getD20().roll();
-		assertTrue(score >= 1 && score <= 20);
+		for (int i = 0; i < ROLL_TIMES; i++)
+		{
+			int score = Dices.getD20().roll();
+			assertTrue(score >= 1 && score <= 20);
+		}
 	}
 
 	@Test
 	public void testRollXTimes()
 	{
-		int score = Dices.getD20().roll(3);
-		assertTrue(score >= 3 && score <= 60);
+		for (int i = 0; i < ROLL_TIMES; i++)
+		{
+			int score = Dices.getD20().roll(3);
+			assertTrue(score >= 3 && score <= 60);
+		}
 	}
 }
