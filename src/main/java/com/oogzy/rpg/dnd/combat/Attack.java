@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import com.oogzy.rpg.Dice;
-import com.oogzy.rpg.Dices;
+import com.oogzy.rpg.DicePack;
 import com.oogzy.rpg.dnd.character.Character;
 
 @Getter
@@ -21,7 +21,7 @@ public class Attack
 
 	public Attack(Character source, Character target)
 	{
-		this(source, target, Dices.getD20());
+		this(source, target, DicePack.getD20());
 	}
 
 	public Attack(Character source, Character target, Dice dice)

@@ -1,6 +1,6 @@
 package com.oogzy.rpg;
 
-public class Dices
+public class DicePack
 {
 	private static final Dice D4 = new Dice(4);
 	private static final Dice D6 = new Dice(6);

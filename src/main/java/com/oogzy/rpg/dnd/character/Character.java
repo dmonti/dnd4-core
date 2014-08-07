@@ -3,7 +3,7 @@ package com.oogzy.rpg.dnd.character;
 import lombok.Getter;
 import lombok.Setter;
 
-import com.oogzy.rpg.Dices;
+import com.oogzy.rpg.DicePack;
 import com.oogzy.rpg.dnd.character.race.RaceName;
 import com.oogzy.rpg.dnd.character.weapon.Weapon;
 import com.oogzy.rpg.dnd.character.weapon.Weapons;
@@ -86,7 +86,7 @@ public class Character
 	public int rollAttack()
 	{
 		final int INSTANT_FAIL = 1;
-		int diceResult = Dices.getD20().roll();
+		int diceResult = DicePack.getD20().roll();
 		if (diceResult <= INSTANT_FAIL)
 			return INSTANT_FAIL;
 
@@ -97,7 +97,7 @@ public class Character
 
 	public int rollInitiative()
 	{
-		int d20Value = Dices.getD20().roll();
+		int d20Value = DicePack.getD20().roll();
 		return d20Value + getInitiative();
 	}
 

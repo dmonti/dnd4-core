@@ -13,7 +13,7 @@ public class DicesTest extends TestCase
 	{
 		for (int i = 0; i < ROLL_TIMES; i++)
 		{
-			int score = Dices.getD20().roll();
+			int score = DicePack.getD20().roll();
 			assertTrue(score >= 1 && score <= 20);
 		}
 	}
@@ -23,7 +23,7 @@ public class DicesTest extends TestCase
 	{
 		for (int i = 0; i < ROLL_TIMES; i++)
 		{
-			int score = Dices.getD20().roll(3);
+			int score = DicePack.getD20().roll(3);
 			assertTrue(score >= 3 && score <= 60);
 		}
 	}
