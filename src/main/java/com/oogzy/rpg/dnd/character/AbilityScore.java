@@ -7,8 +7,8 @@ import lombok.Getter;
 public class AbilityScore
 {
 	@Getter
-	private Ability ability;
+	private final Ability ability;
 
 	@Getter
-	private int bonus;
+	private final int bonus;
 }
