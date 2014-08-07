@@ -34,7 +34,7 @@ public class Character
 		this.info = new Info();
 		this.level = new Level();
 		this.abilities = new Abilities();
-		this.hitPoints = new HitPoints();
+		this.hitPoints = new HitPoints(getAbility(Ability.CON));
 	}
 
 	private Level getLevel()
