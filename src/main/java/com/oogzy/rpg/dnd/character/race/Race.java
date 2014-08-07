@@ -1,6 +1,8 @@
 package com.oogzy.rpg.dnd.character.race;
 
-public class Race
+import com.oogzy.rpg.dnd.character.AbilityScore;
+
+public abstract class Race
 {
-	// TODO Especific bonus.
+	public abstract AbilityScore[] getAbilityScores();
 }
