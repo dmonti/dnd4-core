@@ -4,14 +4,14 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import com.oogzy.rpg.dnd.character.race.RaceName;
+import com.oogzy.rpg.dnd.character.race.Human;
 
 public class CharacterTest extends TestCase
 {
 	@Test
 	public void testNewChar()
 	{
-		Character character = new Character(RaceName.HUMAN);
+		Character character = new Character(new Human());
 		character.setName("CharTest");
 
 		int STR = 6;
@@ -47,7 +47,7 @@ public class CharacterTest extends TestCase
 
 	public void testGetOneHalfOfTheLevel()
 	{
-		Character character = new Character(RaceName.HUMAN);
+		Character character = new Character(new Human());
 		assertEquals(0, character.getOneHalfOfTheLevel());
 	}
 }

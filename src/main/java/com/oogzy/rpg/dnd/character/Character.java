@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import com.oogzy.rpg.DicePack;
-import com.oogzy.rpg.dnd.character.race.RaceName;
+import com.oogzy.rpg.dnd.character.race.Race;
 import com.oogzy.rpg.dnd.character.weapon.Weapon;
 import com.oogzy.rpg.dnd.character.weapon.Weapons;
 import com.oogzy.rpg.dnd.combat.Attack;
@@ -15,7 +15,7 @@ public class Character
 	@Setter
 	private String name;
 
-	private final RaceName race;
+	private final Race race;
 
 	private final Level level;
 
@@ -28,7 +28,7 @@ public class Character
 	@Setter
 	private Weapon weapon;
 
-	public Character(RaceName race)
+	public Character(Race race)
 	{
 		this.race = race;
 		this.info = new Info();
