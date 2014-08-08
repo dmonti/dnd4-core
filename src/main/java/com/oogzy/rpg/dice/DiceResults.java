@@ -14,7 +14,7 @@ public class DiceResults
 	public int sum()
 	{
 		int sum = 0;
-		for (int value : rolls)
+		for (int value : getRolls())
 		{
 			sum += value;
 		}
