@@ -9,6 +9,7 @@ import lombok.Setter;
 import com.oogzy.rpg.dice.DicePack;
 import com.oogzy.rpg.dnd.character.race.Race;
 import com.oogzy.rpg.dnd.character.skill.Skill;
+import com.oogzy.rpg.dnd.character.skill.SkillKey;
 import com.oogzy.rpg.dnd.character.weapon.Weapon;
 import com.oogzy.rpg.dnd.character.weapon.Weapons;
 import com.oogzy.rpg.dnd.combat.Attack;
@@ -191,5 +192,19 @@ public class Character
 	public void setAbility(Ability ability, int value)
 	{
 		getAbilities().set(ability, value);
+	}
+
+	public Skill getSkillBy(SkillKey skillKey)
+	{
+		Skill theSkill = null;
+		for (Skill skill : getSkills())
+		{
+			if (skill.getSkillKey().equals(skillKey))
+			{
+				theSkill = skill;
+				break;
+			}
+		}
+		return theSkill;
 	}
 }
