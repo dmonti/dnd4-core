@@ -1,10 +1,14 @@
 package com.oogzy.rpg.dnd.character;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 
 import com.oogzy.rpg.dice.DicePack;
 import com.oogzy.rpg.dnd.character.race.Race;
+import com.oogzy.rpg.dnd.character.skill.Skill;
 import com.oogzy.rpg.dnd.character.weapon.Weapon;
 import com.oogzy.rpg.dnd.character.weapon.Weapons;
 import com.oogzy.rpg.dnd.combat.Attack;
@@ -25,6 +29,8 @@ public class Character
 
 	private final HitPoints hitPoints;
 
+	private final List<Skill> skills;
+
 	@Setter
 	private Weapon weapon;
 
@@ -35,6 +41,7 @@ public class Character
 		this.level = new Level();
 		this.abilities = new Abilities();
 		this.hitPoints = new HitPoints(getAbility(Ability.CON));
+		this.skills = new ArrayList<Skill>();
 	}
 
 	private Level getLevel()
